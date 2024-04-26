@@ -561,19 +561,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ashley\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ashley\\Downloads\\Midterm_Assignment1_Login-master\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Documents\\GitHub\\Midterm_Assignment1_LoginRegister_Unknownnn\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\ashley\\Downloads\\Midterm_Assignment1_Login-master\\Domain\\Domain.csproj",
-      "packagesPath": "C:\\Users\\ashley\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ashley\\Downloads\\Midterm_Assignment1_Login-master\\Domain\\obj\\",
+      "projectPath": "C:\\Users\\USER\\Documents\\GitHub\\Midterm_Assignment1_LoginRegister_Unknownnn\\Domain\\Domain.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Documents\\GitHub\\Midterm_Assignment1_LoginRegister_Unknownnn\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ashley\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -593,11 +593,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -625,7 +620,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
