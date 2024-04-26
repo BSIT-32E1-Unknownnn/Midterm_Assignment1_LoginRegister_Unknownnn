@@ -1,0 +1,130 @@
+﻿@model Domain.User
+
+<center><h2>Register</h2></center>
+
+<form asp-action="Register" method="post">
+    <hr />
+    <br />
+    <br />
+
+    <center>
+        <div class="form-group">
+            <label asp-for="Username" class="control-label"></label>
+            <input asp-for="Username" class="form-control" placeholder="Enter username" style="width: 500px;" />
+            <span asp-validation-for="Username" class="text-danger" style="width: 80%; display: inline-block;"></span>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="form-control" placeholder="Enter password" style="width: 500px;" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="ConfirmPassword">Confirm Password</label>
+            <input type="text" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Re-enter password" style="width: 500px;" />
+            <span class="text-danger" id="confirmPasswordError"></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Login")'">Sign In</button>
+    </center>
+
+</form>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#ConfirmPassword').on('keyup', function () {
+                var password = $('#Password').val();
+                var confirmPassword = $('#ConfirmPassword').val();
+                if (password != confirmPassword) {
+                    $('#confirmPasswordError').text('Passwords do not match.');
+                } else {
+                    $('#confirmPasswordError').text('');
+                }
+            });
+
+            $('form').submit(function (e) {
+                var password = $('#Password').val();
+                if (!isPasswordValid(password)) {
+                    $('#confirmPasswordError').text('Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special character.');
+                    e.preventDefault(); // Prevent form submission
+                }
+            });
+
+            function isPasswordValid(password) {
+                // Password complexity requirements
+                var passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$/;
+                return passwordRegex.test(password);
+            }
+        });
+    </script>
+}
+
+
+<style>
+
+
+    body {
+        background-color: #FFF8DC; /* Change to your desired background color */
+        padding: 20px; /* Add padding to the body */
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-family: Britannic;
+    }
+
+
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 27px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    form button[type="submit"] {
+        padding: 12px 24px;
+        background-color: #800000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+        form button[type="submit"]:hover {
+            background-color: #FF7F7F;
+        }
+
+    form button[type="button"] {
+        padding: 12px 24px;
+        background-color: tan;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+        form button[type="button"]:hover {
+            background-color: #E8E4C9;
+        }
+</style>
+

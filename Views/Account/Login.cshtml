@@ -1,0 +1,105 @@
+﻿@model Domain.User
+
+<center><h2>Login</h2></center>
+
+<form asp-action="Login" method="post">
+    <hr />
+    <br />
+    <br />
+
+    <center>
+        <div class="form-group">
+            <label asp-for="Username" class="control-label"></label>
+            <input asp-for="Username" class="form-control" placeholder="Enter your username" style="width: 500px;" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+
+        <br />
+
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" style="width: 500px;" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Register")'">Sign Up</button>
+    </center>
+</form>
+
+
+<style>
+
+
+    body {
+        background-color: #FFF8DC; /* Change to your desired background color */
+        padding: 20px; /* Add padding to the body */
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-family: Britannic;
+    }
+
+
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 27px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    form button[type="submit"] {
+        padding: 12px 24px;
+        background-color: #800000;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+        form button[type="submit"]:hover {
+            background-color: #FF7F7F;
+        }
+
+
+    form button[type="button"] {
+        padding: 12px 24px;
+        background-color: tan;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+
+        form button[type="button"]:hover {
+            background-color: #E8E4C9;
+        }
+
+    /*     a {
+            color: red;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            } */
+</style>
