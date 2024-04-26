@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Midterm_FullStack_Assignment1_RegisterLogin.props" />
+</Project>
