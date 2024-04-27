@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿//IUserService
+using Domain;
 
 namespace Service
 {
