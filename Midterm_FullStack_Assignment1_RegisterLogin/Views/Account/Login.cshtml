@@ -1,41 +1,11 @@
 ﻿@model Domain.User
 
-<center><h2>Login</h2></center>
-
-<form asp-action="Login" method="post">
-    <hr />
-    <br />
-    <br />
-
-    <center>
-        <div class="form-group">
-            <label asp-for="Username" class="control-label"></label>
-            <input asp-for="Username" class="form-control" placeholder="Enter your username" style="width: 500px;" />
-            <span asp-validation-for="Username" class="text-danger"></span>
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-        </div>
-
-        <br />
-
-        <div class="form-group">
-            <label asp-for="Password" class="control-label"></label>
-            <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" style="width: 500px;" />
-            <span asp-validation-for="Password" class="text-danger"></span>
-        </div>
-
-
-        <button type="submit" class="btn btn-primary">Login</button>
-        <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Register")'">Sign Up</button>
-    </center>
-</form>
-
-
 <style>
 
 
     body {
-        background-color: #FFF8DC; 
-        padding: 20px; 
+        background-color: #FFF8DC;
+        padding: 20px;
     }
 
     .form-group {
@@ -93,5 +63,33 @@
             background-color: #E8E4C9;
         }
 
-  
 </style>
+
+<center><h2>Login</h2></center>
+
+<form asp-action="Login" method="post">
+    <hr />
+    <br />
+    <br />
+
+    <center>
+        <div class="form-group">
+            <label asp-for="Username" class="control-label"></label>
+            <input asp-for="Username" class="form-control" placeholder="Enter your username" style="width: 500px;" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        </div>
+
+        <br />
+
+        <div class="form-group">
+            <label asp-for="Password" class="control-label"></label>
+            <input asp-for="Password" class="form-control" type="password" placeholder="Enter your password" style="width: 500px;" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="button" class="btn btn-danger" onclick="location.href='@Url.Action("Register")'">Sign Up</button>
+    </center>
+</form>
