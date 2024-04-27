@@ -34,7 +34,7 @@ public class AccountController : Controller
             var existingUser = _userService.GetByUsername(user.Username);
             if (existingUser != null)
             {
-                ModelState.AddModelError("", "Username already exists");
+                ModelState.AddModelError("", "Username already exists!");
                 return View(user);
             }
 
