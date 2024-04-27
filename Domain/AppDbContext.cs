@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿//AppDbContext
+using Microsoft.EntityFrameworkCore;
 
 namespace Domain
 {
