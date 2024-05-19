@@ -17,13 +17,13 @@
 
         <div class="form-group">
             <label asp-for="Password" class="control-label"></label>
-            <input asp-for="Password" class="form-control" placeholder="Enter password" style="width: 500px;" />
+            <input type="password" asp-for="Password" class="form-control" placeholder="Enter password" style="width: 500px;" />
             <span asp-validation-for="Password" class="text-danger"></span>
         </div>
 
         <div class="form-group">
             <label for="ConfirmPassword">Confirm Password</label>
-            <input type="text" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Re-enter password" style="width: 500px;" />
+            <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Re-enter password" style="width: 500px;" />
             <span class="text-danger" id="confirmPasswordError"></span>
         </div>
 
